@@ -1,0 +1,23 @@
+<body>
+    <link rel="stylesheet" href="index.css">
+
+    <fieldset id="gui">
+        <legend>Timer</legend>
+        <label for="duration-visualization">
+            <span>Elapsed time:</span>
+            <span id="duration-visualization"></span>
+        </label>
+        <div id="duration-display">
+            <span id="elapsed-time">-</span>
+            of
+            <span id="total-time">-</span>
+        </div>
+        <label for="duration-config">
+            <span>Duration:</span>
+            <input id="duration-config" type="range" min="0" max="30" step="0.1">
+        </label>
+        <button>Reset</button>
+    </fieldset>
+
+    <script src="index.js" type="module"></script>
+</body>

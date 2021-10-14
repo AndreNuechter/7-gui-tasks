@@ -1,0 +1,30 @@
+:root {
+    --elapsed-percent: 0%;
+}
+
+fieldset {
+    display: inline-block;
+}
+
+label { display: flex; }
+
+button, #remaining-time {
+    display: block;
+    margin-top: 1ch;
+}
+
+#duration-visualization {
+    width: 100%;
+    border: 1px solid grey;
+    position: relative;
+}
+
+#duration-visualization::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: blue;
+    height: 100%;
+    width: var(--elapsed-percent);
+    transition: width .1s linear;
+}
