@@ -1,0 +1,11 @@
+fieldset {
+    display: inline-block;
+}
+
+fieldset * {
+    display: block;
+}
+
+label, button {
+    margin-top: 12px;
+}
