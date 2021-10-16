@@ -1,0 +1,23 @@
+<body>
+    <link rel="stylesheet" href="index.css">
+
+    <fieldset id="gui">
+        <legend>CRUD</legend>
+        <labeled-input id="filter-input" data-label="Filter prefix:"></labeled-input>
+        <div id="data-container">
+            <ul id="list-box"></ul>
+            <form id="update-form">
+                <labeled-input id="name-input" data-name="name" data-label="Name:"></labeled-input>
+                <labeled-input id="surname-input" data-name="surname" data-label="Surname:"></labeled-input>
+            </form>
+        </div>
+        <div id="button-container">
+            <button id="create-button">Create</button>
+            <button id="update-button">Update</button>
+            <button id="delete-button">Delete</button>
+        </div>
+    </fieldset>
+
+    <script src="index.js" type="module"></script>
+    <script src="../../custom-elements/labeled-input.js" type="module"></script>
+</body>

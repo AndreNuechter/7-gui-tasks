@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+#gui {
+    width: 536px;
+    display: inline-block;
+    box-shadow: 5px 5px 2px lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 16px;
+}
+
+#gui > labeled-input {
+    display: block;
+    width: calc(50% - 8px);
+}
+
+legend {
+    font-weight: bold;
+    text-shadow: 2px 2px 2px lightgray;
+}
+
+#data-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: start;
+    margin: 12px 0;
+    width: 100%;
+}
+
+#list-box {
+    border: 1px solid black;
+    display: inline-block;
+    height: 12ch;
+    width: 50%;
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    margin: 0;
+}
+
+.list-box__item.selected {
+    background: blue;
+    color: white;
+}
+
+.list-box__item.filtered-out {
+    display: none;
+}
+
+#update-form {
+    display: inline-block;
+    width: 50%;
+}
+
+#update-form labeled-input {
+    display: inline-block;
+    width: 100%;
+    margin-top: 8px;
+}
+
+button {
+    padding: 1px 16px;
+}
