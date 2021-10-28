@@ -1,0 +1,27 @@
+<body>
+    <link rel="stylesheet" href="index.css">
+
+    <fieldset id="gui">
+        <legend>Circle Drawer</legend>
+        <div id="button-container">
+            <button id="undo-button" disabled>Undo</button>
+            <button id="redo-button" disabled>Redo</button>
+        </div>
+        <svg id="canvas" width="302" height="199"></svg>
+        <div id="overlay-menu">
+            <ul id="overlay-menu-items">
+                <li data-variant-name="diameter-config">Adjust diameter</li>
+            </ul>
+            <div id="diameter-config">
+                <label for="diameter-slider">
+                    Adjust diameter for circle at (
+                    <span id="diameter-config-target-display"></span>
+                    )
+                </label>
+                <input id="diameter-slider" type="range" min="1" max="40" step="1" value="10">
+            </div>
+        </div>
+    </fieldset>
+
+    <script src="index.js" type="module"></script>
+</body>
