@@ -1,6 +1,6 @@
 describe('Counter', () => {
     beforeEach(() => {
-        cy.visit(`localhost:3003/counter/`);
+        cy.visit(`localhost:${Cypress.env('PORT')}/counter/`);
     });
 
     it('starts at 0', () => {

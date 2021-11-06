@@ -1,6 +1,6 @@
 const gui = document.getElementById('gui');
-const celsiusInput = gui.querySelector('[id="celsius"]');
-const fahrenheitInput = gui.querySelector('[id="fahrenheit"]');
+const celsiusInput = gui.querySelector('#celsius');
+const fahrenheitInput = gui.querySelector('#fahrenheit');
 
 const values = {
     celsius: {
@@ -17,14 +17,14 @@ const values = {
     }
 };
 
-const isValid = value => /^-?\d*$/.test(value);
+const isValid = value => /^-?\d*(?:\.\d?)?$/.test(value);
 
 [celsiusInput, fahrenheitInput].forEach((i) => i.value = '');
 
 gui.addEventListener('input', ({ target: { id, value } }) => {
     if (isValid(value)) {
         values[id].value = value;
-        values[id].sibling.value = values[id].conversion(value);
+        values[id].sibling.value = Number((values[id].conversion(value)).toFixed(1)).toString();
     } else {
         values[id].input.value = values[id].value;
     }
