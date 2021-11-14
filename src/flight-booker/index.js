@@ -4,8 +4,12 @@ const departureInput = gui.querySelector('[id="departure"]');
 const returnInput = gui.querySelector('[id="return"]');
 const submitButton = gui.querySelector('button');
 
+const padNumber = num => num.toString().padStart(2, '0');
+
 const initialModalityValue = 'one-way flight';
-const initialDateValue = new Date;
+const initialDateValue = ((date) => {
+    return `${date.getFullYear()}-${padNumber(date.getMonth() + 1)}-${padNumber(date.getDate())}`;
+})(new Date);
 
 const state = {
     modality: initialModalityValue,
@@ -18,7 +22,7 @@ const state = {
 
 returnInput.disabled = true;
 modalitySelect.value = state.modality;
-[departureInput, returnInput].forEach((e) => e.valueAsDate = state[e.id]);
+[departureInput, returnInput].forEach((e) => e.value = state[e.id]);
 
 gui.addEventListener('change', ({ target: { id, value } }) => {
     state[id] = value;
